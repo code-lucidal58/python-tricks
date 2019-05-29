@@ -29,3 +29,17 @@ add(5, 3)
 • Lambda functions are single-expression functions that are not necessarily bound to a name (they can be anonymous).
 • Lambda functions can't use regular Python statements and always include an implicit `return` statement.
 """
+
+
+# Function argument unpacking
+
+def myfunc(x, y, z):
+    print(x, y, z)
+
+
+tuple_vec = (1, 0, 1)
+dict_vec = {'x': 1, 'y': 0, 'z': 1}
+
+myfunc(*tuple_vec)
+
+myfunc(**dict_vec)
