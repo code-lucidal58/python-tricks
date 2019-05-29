@@ -1,5 +1,6 @@
 '''
 timeit module allows user to measure the execution time of small Python code snippets
+the number parameter is a multiplying factor of the resultant execution time for the given statement
 '''
 
 import timeit
