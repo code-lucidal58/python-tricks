@@ -1,6 +1,7 @@
 """
 This script contains all out of box features related to functions in Python
 """
+import contextlib
 
 '''Python 3.5+ supports 'type annotations' that can be used with tools like Mypy to write statically typed Python'''
 
@@ -55,6 +56,7 @@ def hello(a, b, *, c='x', d='y', e='z'):
 
 
 # To pass the value for c, d, and e, it has to be explicitly passed as "key=value" named arguments
-# hello(1, 2, 'p', 'q', 'v')  # This will throw TypeError: hello() takes 2 positional arguments but 5 were given
+with contextlib.suppress(TypeError):
+    hello(1, 2, 'p', 'q', 'v')  # This will throw TypeError: hello() takes 2 positional arguments but 5 were given
 
 hello(1, 2, c='p', d='q', e='v')
