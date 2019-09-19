@@ -4,5 +4,6 @@ Execute the following in python:
 ```python
 import antigravity
 ```
-Happy Easter! :)
-
+```python
+import this
+```
